@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mail</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .logo-img {
+            padding: 10px;
+        }
+
+        .titulo {
+            font-size: 24px;
+            line-height: 33px;
+            font-weight: 700;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .title-sub {
+            font-size: 24px;
+            line-height: 33px;
+            font-weight: 700;
+            color: #00a04c !important;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .titulo_banner {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            color: #757575;
+            margin-top: 54px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .subtitulo_banner {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            color: #757575;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+        }
+
+        .titulo_numero {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            padding-top: 10px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+
+        .container-topo {
+            width: 600px;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+        .container-rodape {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo-rodape {
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        a:hover {
+            color: #17e074;
+            ;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        span {
+            text-align: center;
+            font-size: 9px;
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        article {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .fundo-banner {
+            width: 50%;
+            height: 215px;
+            background-color: #f4f4f4;
+        }
+
+        .fundo-banner-img {
+            width: 50%;
+            height: auto;
+        }
+
+        .fundo-qrcode {
+            width: 30%;
+            height: 165px;
+            margin-left: 22px;
+
+        }
+
+        .fundo-barrapagamento {
+            width: 70%;
+            height: 73px;
+        }
+
+        section {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .texto_QR {
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            color: #3d3d3d;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .texto_QR1 {
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            color: #3d3d3d;
+            font-size: 14px;
+            font-weight: 600;
+
+            margin-top: 12px;
+        }
+
+        .texto_section {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #3d3d3d;
+            font-size: 14px;
+            font-weight: 400;
+            padding-left: 110px;
+            padding-right: 110px;
+            line-height: 1.5rem;
+        }
+
+        .texto_section_strong {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #3d3d3d;
+            font-size: 18px;
+            font-weight: 800;
+            padding-left: 60px;
+            padding-right: 60px;
+            line-height: 2rem;
+            margin-top: 10px;
+        }
+
+        .texto_datas {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #3d3d3d;
+            font-size: 12px;
+            font-weight: 400;
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 1.5rem;
+        }
+
+        .texto_informativo {
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            color: #b7b7b7;
+            font-size: 9px;
+            font-weight: 400;
+            padding-left: 30px;
+            padding-right: 30px;
+            line-height: 1rem;
+        }
+
+        .espacamento {
+            line-height: 2.5rem;
+        }
+
+        .centralizar {
+            text-align: center;
+        }
+
+        .margem {
+            margin-top: 5px;
+        }
+
+        @media only screen and (max-width:375px) {
+            .fundo-banner-img {
+                width: 100%;
+                height: auto;
+            }
+
+            .fundo-banner {
+                width: 100%;
+                height: 215px;
+                background-color: #f4f4f4;
+            }
+
+            article {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .container {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .fundo-qrcode {
+                width: 50%;
+                height: 165px;
+                align-self: center;
+            }
+
+            .texto_datas {
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                color: #3d3d3d;
+                font-size: 12px;
+                font-weight: 400;
+                padding-left: 20px;
+                line-height: 1.5rem;
+            }
+
+            .fundo-barrapagamento {
+                width: 100%;
+                height: 73px;
+            }
+
+            .texto_informativo {
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+                color: #b7b7b7;
+                font-size: 9px;
+                font-weight: 400;
+                line-height: 1rem;
+            }
+
+            .logo {
+                align-items: center;
+                vertical-align: middle;
+                width: 100%;
+            }
+
+            .logo-img {
+                width: 100%;
+                align-items: center;
+            }
+
+            .container-topo {
+                width: 100%;
+                margin: 0 auto;
+                background-color: black;
+            }
+
+            .container-rodape {
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .espacamento {
+                margin-top: 90px;
+            }
+
+            .tamanho-img {
+                width: 375px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="container-topo">
+            <div class="logo logo-img">
+                <a href="index.html">
+                    <img src="img/cupom.png" width=300 height=42 class="img-logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <article>
+            <div class="fundo-banner-img">
+                <img src="img/img-mc.jpg" class="tamanho-img">
+            </div>
+            <div class="fundo-banner">
+                <p class="titulo_banner"> CUPOM DE DESCONTO PARA SUA COMPRA</p>
+                <p class="titulo_numero"> R$ 30 OFF</p>
+                <p class="subtitulo_banner"> EXCLUSIVO PARA VOCÊ</p>
+            </div>
+        </article>
+        <section>
+            <p class="texto_section_strong margem">Olá!</p>
+            <p class="texto_section">Você enviou a palavra <strong><i>“2POR1”</i></strong> e ganhou 30% off na compra de
+                qualquer MCOFERTA.</p>
+            <p class="centralizar margem"><span>Este cupom poderá ser utilizado apenas uma vez.</span></p>
+        </section>
+
+
+
+        <div style="height: 1px; background-color: #e2e2e2; margin-top: 10px; margin-bottom: 20px ;"> </div>
+        <section>
+            <p class="texto_datas">Parceiro: McDonald´s<br>
+                Válidade inicial: 01/06/2020 | Válidade até: 22/06/2020<br>
+                Preço com desconto: R$ 19,90 | Preço original: R$30,00
+            </p>
+        </section>
+
+        <div style="height: 1px; background-color: #e2e2e2;"> </div>
+        <article>
+            <div class="fundo-qrcode">
+                <img src="img/QRCode.png">
+            </div>
+            <div class="fundo-barrapagamento">
+                <p class="texto_QR1">VALIDE SEU DESCONTO</p>
+                <p class="texto_QR margem">Utilize o QR code ou o código de barras para obter o desconto </p>
+                <p><img src="img/barra_pgamento.png"></p>
+            </div>
+        </article>
+        <section>
+            <p class=" texto_informativo espacamento">É BOM SABER</p>
+            <p class="texto_informativo">Desconto não cumulativo com outras promoções. Imagens meramente ilustrativas. Válido nos restaurantes Viena Express, exceto aeroportos, rodovia e hospitais
+                (consulte endereços).</p>
+
+            <p class="texto_informativo margem">Aviso: O presente cupom é de autoria do estabelecimento parceiro. Caso seu cupom não seja aceito ou haja qualquer outro tipo de problema, entre, por favor,
+                em contato com o atendimento ao cliente da marca anunciada. O CupomMobile é uma plataforma gratuita de divulgação de ofertas, não tendo qualquer controle
+                no momento de validação.</p>
+        </section>
+    </div>
+    <footer>
+        <div class="container-rodape">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/cupom_preto.png" width=131 height=18 class="img-logo">
+                </a>
+            </div>
+            <span>© Nexxys. Todos os direitos reservados</span>
+        </div>
+    </footer>
+</body>
+
+</html>
